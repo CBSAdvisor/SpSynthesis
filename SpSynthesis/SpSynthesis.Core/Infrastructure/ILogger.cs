@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SpFlyVoices.Core.Infrastructure
+namespace SpSynthesis.Core.Infrastructure
 {
     public interface ILogger
     {

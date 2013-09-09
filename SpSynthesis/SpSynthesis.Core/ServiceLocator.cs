@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SpFlyVoices.Core
+namespace SpSynthesis.Core
 {
     public static class ServiceLocator
     {
