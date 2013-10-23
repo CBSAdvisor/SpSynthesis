@@ -16,7 +16,12 @@ namespace SpSynthesis.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+
+            ApplicationCtx = new AppContext();
+
+            Application.Run(ApplicationCtx);
         }
+
+        public static AppContext ApplicationCtx { get; set; }
     }
 }

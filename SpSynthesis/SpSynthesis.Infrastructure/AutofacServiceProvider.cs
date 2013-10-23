@@ -21,8 +21,7 @@ namespace SpSynthesis.Infrastructure
 
         public T ResolveInstance<T>()
         {
-            return _container
-                .Resolve<T>();
+            return _container.Resolve<T>();
         }
 
         public object ResolveInstance(Type service)

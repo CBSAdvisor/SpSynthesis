@@ -17,7 +17,7 @@ using System.Reflection;
 // использу€ "*", как показано ниже:
 // [assembly: AssemblyVersion("1.0.*")]
  
-[assembly: AssemblyVersion("1.0.1.<#= this.RevisionNumber #>")]
+[assembly: AssemblyVersion("1.0.<#= this.buildNumber #>.<#= this.RevisionNumber #>")]
 [assembly: AssemblyFileVersion("1.0.<#= this.buildNumber #>.<#= this.RevisionNumber #>")]
 <#+
     int RevisionNumber = (int)(DateTime.UtcNow - new DateTime(DateTime.UtcNow.Year, DateTime.UtcNow.Month, DateTime.UtcNow.Day)).TotalMinutes;
