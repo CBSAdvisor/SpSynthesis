@@ -29,18 +29,16 @@ namespace SpSynthesis.Data
             {
                 _dbContext = new SpSynthDbContext(); 
 
-                if (!_dbContext.Database.Exists())
-                {
-                    Database.SetInitializer(new SpSynthDbInitializer());
-                    //Database.DefaultConnectionFactory = new SqlCeConnectionFactory(
-                    //    "System.Data.SqlServerCe.4.0",
-                    //    @"D:\Projects\github-repo\SpSynthesis\SpSynthesis\SpSynthesis.UI\bin\Debug\Data\",
-                    //    @"Data Source=D:\Projects\github-repo\SpSynthesis\SpSynthesis\SpSynthesis.UI\bin\Debug\Data\SpSynth.sdf");
-                }
-                else
-                {
-                    Database.SetInitializer(new MigrateDatabaseToLatestVersion<SpSynthDbContext, SpSynthMigrationConfig>());
-                }
+                //if (!_dbContext.Database.Exists())
+                //{
+                //    Database.SetInitializer(new SpSynthDbInitializer());
+                //}
+                //else
+                //{
+                //    Database.SetInitializer(new MigrateDatabaseToLatestVersion<SpSynthDbContext, SpSynthMigrationConfig>());
+                //}
+
+                Database.SetInitializer(new SpSynthDbInitializer());
                 _dbContext.Database.Initialize(true);
             }
             catch (Exception ex)

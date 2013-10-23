@@ -7,10 +7,11 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SpSynthesis.Data.Migrations;
 
 namespace SpSynthesis.Data
 {
-    public class SpSynthDbInitializer : CreateDatabaseIfNotExists<SpSynthDbContext>
+    internal class SpSynthDbInitializer : CreateAndMigrateDatabaseInitializer<SpSynthDbContext, Configuration>
     {
         public SpSynthDbInitializer()
             : base()

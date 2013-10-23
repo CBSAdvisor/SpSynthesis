@@ -54,6 +54,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Entity.cs" />
+    <Compile Include="Domain\EntityWithTypedId.cs" />
     <Compile Include="Domain\IRepository.cs" />
     <Compile Include="Domain\IUnitOfWork.cs" />
     <Compile Include="Infrastructure\ILogger.cs" />

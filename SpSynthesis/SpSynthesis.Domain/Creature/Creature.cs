@@ -3,27 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SpSynthesis.Core.Domain;
 
 namespace SpSynthesis.Domain
 {
     /// <summary>
     /// Class Unit
     /// </summary>
-    public class Creature
+    public class Creature : Entity<Creature>
     {
         /// <summary>
         /// Initializes a new instance of the <see cref="Creature" /> class.
         /// </summary>
         public Creature()
         {
-            Id = Guid.NewGuid();
         }
 
-        /// <summary>
-        /// Gets or sets the id.
-        /// </summary>
-        /// <value>The id.</value>
-        public Guid Id { get; set; }
         /// <summary>
         /// Gets or sets the name.
         /// </summary>

@@ -54,16 +54,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CreateAndMigrateDatabaseInitializer.cs" />
     <Compile Include="DbContextFactory.cs" />
     <Compile Include="IDbContextFactory.cs" />
     <Compile Include="IEFUnitOfWork.cs" />
     <Compile Include="Mapping\CreatureMapping.cs" />
+    <Compile Include="Migrations\201310231315505_InitialCreate.cs" />
+    <Compile Include="Migrations\201310231315505_InitialCreate.Designer.cs">
+      <DependentUpon>201310231315505_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="UnitOfWork.cs" />
     <Compile Include="IDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SpSynthDbContext.cs" />
     <Compile Include="SpSynthDbInitializer.cs" />
-    <Compile Include="SpSynthMigrationConfig.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -78,6 +83,11 @@
       <Project>{15dbcb9c-7d18-4ac2-a904-3c71a5dc16f3}</Project>
       <Name>SpSynthesis.Domain</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201310231315505_InitialCreate.resx">
+      <DependentUpon>201310231315505_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>

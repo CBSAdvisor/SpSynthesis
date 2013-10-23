@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Book\Book.cs" />
     <Compile Include="Creature\Creature.cs" />
     <Compile Include="Creature\CreatureService.cs" />
     <Compile Include="Creature\ICreatureRepository.cs" />
@@ -70,6 +71,7 @@
       <Name>SpSynthesis.Core</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>
