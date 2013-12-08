@@ -14,7 +14,7 @@ namespace SpSynthesis.Data
         where TContext : DbContext
         where TConfiguration : DbMigrationsConfiguration<TContext>, new()
     {
-        private readonly DbMigrationsConfiguration _configuration;
+        private readonly TConfiguration _configuration;
         public CreateAndMigrateDatabaseInitializer()
         {
             _configuration = new TConfiguration();
